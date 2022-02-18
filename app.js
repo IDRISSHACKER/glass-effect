@@ -26,6 +26,83 @@ const GAMES = [
         img: "gow.jpg",
         progression: 50,
         ctg: "PS5 version"
+    },
+    {
+        id: 5,
+        title: "Tokyo Ghoul",
+        img: "ghoul.jpg",
+        progression: 80,
+        ctg: "PS5 version"
+    },
+    {
+        id: 6,
+        title: "Spider Man Milles Moralex",
+        img: "spider.jpg",
+        progression: 30,
+        ctg: "PS5 version"
+    },
+    {
+        id: 7,
+        title: "Ghost of thushima",
+        img: "ghost.jpg",
+        progression: 50,
+        ctg: "PS5 version"
+    },
+    {
+        id: 1,
+        title: "Tokyo Ghoul",
+        img: "ghoul.jpg",
+        progression: 80,
+        ctg: "PS5 version"
+    },
+    {
+        id: 2,
+        title: "Spider Man Milles Moralex",
+        img: "spider.jpg",
+        progression: 30,
+        ctg: "PS5 version"
+    },
+    {
+        id: 3,
+        title: "Ghost of thushima",
+        img: "ghost.jpg",
+        progression: 50,
+        ctg: "PS5 version"
+    },
+    {
+        id: 4,
+        title: "God of war",
+        img: "gow.jpg",
+        progression: 50,
+        ctg: "PS5 version"
+    },
+    {
+        id: 5,
+        title: "Tokyo Ghoul",
+        img: "ghoul.jpg",
+        progression: 80,
+        ctg: "PS5 version"
+    },
+    {
+        id: 6,
+        title: "Spider Man Milles Moralex",
+        img: "spider.jpg",
+        progression: 30,
+        ctg: "PS5 version"
+    },
+    {
+        id: 7,
+        title: "Ghost of thushima",
+        img: "ghost.jpg",
+        progression: 50,
+        ctg: "PS5 version"
+    },
+    {
+        id: 8,
+        title: "God of war",
+        img: "gow.jpg",
+        progression: 50,
+        ctg: "PS5 version"
     }
 ]
 
@@ -113,5 +190,33 @@ const manageMenu = () => {
     })
 }
 
+const textXhr = () => {
+    const xhr = new XMLHttpRequest()
+
+    xhr.onprogress = (e) => {
+        console.log("demande des données en cour...")
+    }
+
+    xhr.onerror = (e) => {
+        console.log("Erreur l'ors de la requête")
+    }
+
+    xhr.onloadstart = () => {
+        console.log("demarrage de la requete")
+    }
+    xhr.onloadend = () => {
+        if (xhr.status === 200) {
+            console.log(xhr.responseText)
+        } else if (xhr.status === 404) {
+            console.log("Erreur l'ors de la requete 404")
+        }
+        console.log("Terminée")
+    }
+
+    xhr.open("get", "http://localhost:3000/", true)
+    xhr.send()
+}
+
 searchGames()
 manageMenu()
+textXhr()
