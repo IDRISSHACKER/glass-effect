@@ -44,8 +44,8 @@ main {
     padding-top: 100px;
     min-height: 100vh !important;
     background: #edf4f7;
-    /*background: linear-gradient(to right top, #65dfc9, #6cdbeb);
-    background: linear-gradient(to right top, #f0f1f5, #f1f3f5);*/
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    /*background: linear-gradient(to right top, #f0f1f5, #f1f3f5);*/
     display: flex;
     align-items: center;
     justify-content: center;
